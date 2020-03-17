@@ -1,0 +1,47 @@
+page-energy-monitor {
+    .card-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: -1em;
+    }
+    
+    .dataTitle {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.2em;
+    }
+
+    .image {
+        height: 6em;
+        width: auto;
+        margin: auto;
+        display: block;
+    }
+
+    .value {
+        margin-top: 0.2em;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .arrow {
+        height: 2.5em;
+        width: auto;
+        margin: auto;
+        display: block;
+    }
+    .card-content {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .scroll-content { 
+        padding-top: 0 !important; 
+    }
+
+    .col {
+        padding: 0;
+    }
+}

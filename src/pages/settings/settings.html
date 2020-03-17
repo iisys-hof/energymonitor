@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Einstellungen</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="goToAbout()">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Konto</ion-list-header>
+    <ion-item>
+      <ion-label floating>Benutzername</ion-label>
+      <ion-input type="text" [(ngModel)]="userMod.name" [(value)]="nm"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Passwort</ion-label>
+      <ion-input type="password" [(ngModel)]="userMod.password" [value]="pwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>C.M.I. ID</ion-label>
+      <ion-input type="text" [(ngModel)]="userMod.cmiid" [value]="cmiid"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Profile</ion-label>
+      <ion-input type="text" [(ngModel)]="userMod.profile" [value]="profile"></ion-input>
+    </ion-item>
+    <ion-item></ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Gerätezuordnung</ion-list-header>
+    <ion-item *ngFor="let item of dbData"> 
+      <ion-label>{{item.name}}</ion-label>
+      <ion-select [(ngModel)]="item.id" (ionChange)="onChange(item.id, item.name)" interface="popover">
+        <ion-option *ngFor="let device of item.map" [value]="device" selected="alsd">{{device}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  
+  <button ion-button (click)="dropTable()">Drop Table</button>
+  <button ion-button (click)="accessToken()">Access Token</button>
+  <button ion-button (click)="getLatestLog()">Latest Log</button>
+  <button ion-button (click)="addToken()">Add</button>
+  <button ion-button (click)="getToken()">Get</button>
+  <button ion-button (click)="test()">Test</button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full (click)="saveCredentials()">Speichern</button>
+  </ion-toolbar>
+</ion-footer>

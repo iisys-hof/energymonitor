@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "name": "EVI",
+      "values": [
+        {
+          "description": "&beta;:&nbsp;",
+          "value": "3.3"
+        }
+      ]
+    },
+    {
+      "name": "Photovoltaik",
+      "values": [
+        {
+          "description": "Aktuell:&nbsp;",
+          "value": "7 kW"
+        },
+        {
+          "description": "Heute:&nbsp;",
+          "value": "23 kWh"
+        }
+      ]
+    }
+  ]
+}

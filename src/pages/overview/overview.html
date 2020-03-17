@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>
+      Übersicht
+      <p class="subtitle">{{latestLogged}}</p>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="goToSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Zum Aktualisieren loslassen..." refreshingSpinner="circles">
+
+    </ion-refresher-content>
+  </ion-refresher>
+  <div *ngIf="hasItData()">Daten werden noch aus dem Webportal geladen.
+    <br>
+    <br>Sobald die Daten abgerufen wurden, werden sie nach dem nächsten Appstart hier angezeigt.</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-4 col-xl-3 *ngFor="let item of data">
+        <ion-card (click)="showDetails(item)" *ngIf="test(true)">
+          <ion-card-header>
+            <img src="assets/imgs/{{item.name | dataPipe}}.png" class="card-image">
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>{{item.name}}</ion-card-title>
+            <ion-grid>
+              <ion-row *ngFor="let values of item.values">
+                <ion-col col-6 text-end text-nowrap class="ic" [innerHTML]="values.description"></ion-col>
+                <ion-col col-6 text-nowrap class="ic">{{values.value}} {{values.unit}}</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "name": "EVI",
+      "values": [
+        {
+          "description": "&beta;:&nbsp;",
+          "value": "3,3"
+        },
+        {
+          "description": "Verbrauch:&nbsp;",
+          "value": "0,24 kW"
+        }
+      ]
+    },
+    {
+      "name": "Photovoltaik",
+      "values": [
+        {
+          "description": "Aktuell:&nbsp;",
+          "value": "7 kW"
+        },
+        {
+          "description": "Heute:&nbsp;",
+          "value": "23 kWh"
+        }
+      ]
+    },
+    {
+      "name": "Heizung",
+      "values": [
+        {
+          "description": "Status:&nbsp;",
+          "value": "Ein"
+        },
+        {
+          "description": "Temp.:&nbsp;",
+          "value": "66,7 °C"
+        }
+      ]
+    },
+    {
+      "name": "Solarthermie",
+      "values": [
+        {
+          "description": "&larr;&nbsp;",
+          "value": "46 °C"
+        },
+        {
+          "description": "&rarr;&nbsp;",
+          "value": "31 °C"
+        }
+      ]
+    },
+    {
+      "name": "Pufferspeicher",
+      "values": [
+        {
+          "description": "58,9 °C&nbsp;&nbsp;",
+          "value": "57,9 °C"
+        },
+        {
+          "description": "53,6 °C&nbsp;&nbsp;",
+          "value": "51,9 °C"
+        }
+      ]
+    },
+    {
+      "name": "Verbrauch",
+      "values": [
+        {
+          "description": "Aktuell:&nbsp;",
+          "value": "2,1 kW"
+        },
+        {
+          "description": "Heute:&nbsp;",
+          "value": "7,4 kWh"
+        }
+      ]
+    },
+    {
+      "name": "Energiespeicher",
+      "values": [
+        {
+          "description": "Geladen:&nbsp;",
+          "value": "80 %"
+        }
+      ]
+    },
+    {
+      "name": "Energiemonitor",
+      "values": [
+        {
+          "description": "Bezug:&nbsp;",
+          "value": "1,2 kW"
+        }
+      ]
+    }
+  ]
+}

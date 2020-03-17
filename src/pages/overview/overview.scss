@@ -1,0 +1,58 @@
+page-overview {
+    .card {
+        height: 16em;
+        width: auto;
+        margin: 0;
+    }
+    .card-image {
+        height: 6em;
+        width: auto;
+        margin: auto;
+        display: block;
+    }
+    .ion-col {
+        padding: 0.5rem;
+    }
+
+    .card-container {
+        background-size: cover;
+        min-height: 100px;
+    }
+
+    .card-content {
+        padding: 0;
+    }
+
+
+    // List Settings
+    .card-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: -0.5em;
+    }    
+    .item {
+        margin-top: -0.75em;
+        padding: 0;
+        text-align: center;
+    }
+
+    .ic {
+        padding: 0px !important;
+    }
+
+    .ctitle {
+        padding-bottom: 0px !important;
+    }
+
+    .toolbar-title {
+        overflow: visible;
+        position: relative;
+        .subtitle {
+          position: absolute;
+          top: 8px;
+          font-size: 66%;
+        }
+      }
+    
+}

@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Energiemonitor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <p class="dataTitle">{{strom.name}}</p>
+        <img src="assets/imgs/{{strom.name | dataPipe}}.png" class="image">
+        <p class="value">{{strom.value}}</p>
+      </ion-col>
+      <ion-col col-6>
+        <p class="dataTitle">{{photovoltaik.name}}</p>
+        <img src="assets/imgs/{{photovoltaik.name | dataPipe}}.png" class="image">
+        <p class="value">{{photovoltaik.value}} kW</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col><img src="assets/imgs/Pfeil.png" class="arrow" style="float: right;" [ngStyle]="setArrowStyle()"></ion-col>
+        <ion-col col-3></ion-col>
+        <ion-col><img src="assets/imgs/Pfeil.png" class="arrow" style="transform: rotate(-150deg); float: left;"></ion-col>
+      </ion-row>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-6>
+        <p class="dataTitle">{{verbrauchGesamt.name}}</p>
+        <img src="assets/imgs/{{verbrauchGesamt.name | dataPipe}}.png" class="image">
+        <p class="value">{{verbrauchGesamt.value}} kW</p>
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><img src="assets/imgs/Pfeil.png" class="arrow" style="transform: rotate(-150deg); float: right;"></ion-col>
+      <ion-col col-3></ion-col>
+      <ion-col><img src="assets/imgs/Pfeil.png" class="arrow" style="transform: rotate(150deg); float: left;"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <p class="dataTitle">{{evi.name}}</p>
+        <img src="assets/imgs/{{evi.name | dataPipe}}.png" class="image">
+        <p class="value">{{evi.value}} kW</p>
+      </ion-col>
+      <ion-col col-6>
+        <p class="dataTitle">{{verbrauchSonstige.name}}</p>
+        <img src="assets/imgs/{{verbrauchSonstige.name | dataPipe}}.png" class="image">
+        <p class="value">{{verbrauchSonstige.value}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
